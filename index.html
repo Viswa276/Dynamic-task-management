@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="container">
+        <h1>Task Management System</h1>
+        <div class="task-input">
+            <input type="text" id="taskTitle" placeholder="Task Title">
+            <label for="taskStartDate">Start Date:</label>
+            <input type="date" id="taskStartDate">
+            <label for="taskEndDate">End Date:</label>
+            <input type="date" id="taskEndDate">
+            <button class="btn" onclick="addTask()">Add Task</button>
+        </div>
+        <div class="filter-buttons">
+            <button class="btn" onclick="filterTasks('all')">All Tasks</button>
+            <button class="btn" onclick="filterTasks('completed')">Completed Tasks</button>
+            <button class="btn" onclick="filterTasks('pending')">Pending Tasks</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
